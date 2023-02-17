@@ -20,12 +20,12 @@ const BookList = () => {
   if(loading) return <Loading />;
 
   return (
-    <section className='booklist'>
-      <div className='container'>
-        <div className='section-title'>
+    <section className='w-screen'>
+      <div className='w-screen h-full'>
+        <div className='font-bold p-10 font-base'>
           <h2>{resultTitle}</h2>
         </div>
-        <div className='booklist-content grid'>
+        <div className='flex flex-wrap gap-2 items-center justify-center'>
           {
             booksWithCovers.slice(0, 30).map((item, index) => {
               return (
