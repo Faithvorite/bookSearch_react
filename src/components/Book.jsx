@@ -3,29 +3,29 @@ import { Link } from 'react-router-dom';
 
 const Book = (book) => {
   return (
-    <div className='book-item flex flex-column flex-sb'>
-      <div className='book-item-img'>
-        <img src = {book.cover_img} alt = "cover" />
-      </div>
-      <div className='book-item-info text-center'>
+    <div className='flex flex-col min-w-[350px] rounded-md min-h-[550px] p-4 items-center justify-center bg-slate-100 hover:shadow-lg'>
+      <Link to = {`/book/${book.id}`} {...book}>
+        <img src = {book.cover_img} alt = "cover" className='w-[220px] h-[350px] object-cover pb-4'/>
+      </Link>
+      <div className='max-w-[200px] text-center'>
         <Link to = {`/book/${book.id}`} {...book}>
           <div className='book-item-info-item title fw-7 fs-18'>
-            <span>{book.title}</span>
+            <span className='font-oswald text-xl uppercase'>{book.title}</span>
           </div>
         </Link>
 
-        <div className='book-item-info-item author fs-15'>
-          <span className='text-capitalize fw-7'>Author: </span>
+        <div className='font-oswald'>
+          <span className='font-poppins'>Author: </span>
           <span>{book.author.join(", ")}</span>
         </div>
 
-        <div className='book-item-info-item edition-count fs-15'>
-          <span className='text-capitalize fw-7'>Total Editions: </span>
+        <div className='font-poppins'>
+          <span className='font-poppins'>Total Editions: </span>
           <span>{book.edition_count}</span>
         </div>
 
-        <div className='book-item-info-item publish-year fs-15'>
-          <span className='text-capitalize fw-7'>First Publish Year: </span>
+        <div className='font-poppins'>
+          <span className='font-poppins'>First Publish Year: </span>
           <span>{book.first_publish_year}</span>
         </div>
       </div>

@@ -4,10 +4,10 @@ import { Outlet } from 'react-router-dom'
 
 const Home = () => {
   return (
-    <main className='bg-[rgb(136,152,185)]/10 h-screen '>
+    <main className='bg-[rgb(136,152,185)]/40 h-full '>
       <Navbar />
       <Hero />
-      <SearchForm />
+      {/* <SearchForm /> */}
       <BookList />
       <Outlet />
     </main>
