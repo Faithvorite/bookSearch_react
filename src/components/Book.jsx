@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 const Book = (book) => {
   return (
-    <div className='flex flex-col min-w-[350px] rounded-md min-h-[550px] p-4 items-center justify-center bg-slate-100 hover:shadow-lg'>
+    <div className='flex flex-col min-w-[350px] rounded-md min-h-[550px] p-4 items-center justify-center bg-white hover:shadow-lg transition-all ease-in-out'>
       <Link to = {`/book/${book.id}`} {...book}>
         <img src = {book.cover_img} alt = "cover" className='w-[220px] h-[350px] object-cover pb-4'/>
       </Link>
-      <div className='max-w-[200px] text-center'>
+      <div className='max-w-[300px] text-center'>
         <Link to = {`/book/${book.id}`} {...book}>
           <div className='book-item-info-item title fw-7 fs-18'>
             <span className='font-oswald text-xl uppercase'>{book.title}</span>

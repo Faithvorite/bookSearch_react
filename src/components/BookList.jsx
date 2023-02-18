@@ -23,7 +23,7 @@ const BookList = () => {
     <section className='w-screen items-center'>
       <div className='w-full px-24 h-full'>
         <div className='font-bold p-10'>
-          <h2 className='font-logo text-[rgb(136,152,185)] tracking-wider'>{resultTitle}</h2>
+          <h2 className='font-oswald text-[rgb(136,152,185)] text-xl uppercase text-center'>{resultTitle}</h2>
         </div>
         <div className='flex flex-wrap gap-10 items-center justify-center'>
           {

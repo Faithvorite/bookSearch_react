@@ -5,6 +5,15 @@
 * {
     font-family: 'Inter', sans-serif;
 }
+@layer utilities {
+
+.clip-your-needful-style {
+
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 6vw));
+
+}
+
+}
 
 @media screen and (min-width: 480px) {
     .card:nth-child(7n + 1) {

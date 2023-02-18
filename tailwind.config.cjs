@@ -4,6 +4,9 @@ module.exports = {
   content: ['./src/**/*.{js,jsx}'],
   theme: {
     extend: {
+      clipPath: {
+        mycurve: "polygon(0 0, 15% 0, 40% 5%, 65% 0, 85% 0, 100% 5%, 100% 100%, 85% 95%, 70% 95%, 40% 100%, 15% 95%, 0 95%)",
+    },
       backgroundImage: {
         'bridge': "url('https://i.imgur.com/CoQnIbZ.png')",
       },
@@ -26,5 +29,6 @@ module.exports = {
   plugins: [
     // ...
     require('tailwind-scrollbar'),
+    require('tailwind-clip-path'),
 ],
 };
