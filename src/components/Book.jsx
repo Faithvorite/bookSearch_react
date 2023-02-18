@@ -14,19 +14,19 @@ const Book = (book) => {
           </div>
         </Link>
 
-        <div className='font-oswald'>
-          <span className='font-poppins'>Author: </span>
-          <span>{book.author.join(", ")}</span>
+        <div >
+          <span className='font-oswald'>Author: </span>
+          <span className='font-base'>{book.author?.join(", ")}</span>
         </div>
 
-        <div className='font-poppins'>
-          <span className='font-poppins'>Total Editions: </span>
-          <span>{book.edition_count}</span>
+        <div>
+          <span className='font-oswald'>Total Editions: </span>
+          <span className='font-base'>{book.edition_count}</span>
         </div>
 
-        <div className='font-poppins'>
-          <span className='font-poppins'>First Publish Year: </span>
-          <span>{book.first_publish_year}</span>
+        <div >
+          <span className='font-oswald'>First Publish Year: </span>
+          <span className='font-base'>{book.first_publish_year}</span>
         </div>
       </div>
     </div>
