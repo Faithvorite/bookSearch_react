@@ -48,13 +48,13 @@ const BookDetails = () => {
 
   return (
     <section className='book-details'>
-      <div className='p-10 items-center '>
+      <div className='p-2 sm:p-10 items-center '>
         <button type='button' className='flex' onClick={() => navigate("/")}>
           <FaArrowLeft className='hover:-translate-y-2 transition-all ease-in-out' size = {22} />
           <span className='font-oswald px-4'>Go Back</span>
         </button>
 
-        <div className='flex flex-col lg:flex-row items-center justify-center p-10 px-24 gap-10'  > 
+        <div className='flex flex-col lg:flex-row items-center justify-center p-10 sm:px-24 gap-10'  > 
           <div className='flex-1book-details-img'>
             <img src = {book?.cover_img} alt = "cover img" />
           </div>
