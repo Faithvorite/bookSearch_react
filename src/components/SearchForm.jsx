@@ -24,7 +24,7 @@ const SearchForm = () => {
   }
   return (
     <div className='w-screen flex py-12 items-center justify-center '>
-    <form onSubmit={handleSubmit} className='bg-slate-100 w-3/6 flex justify-between p-4 rounded-lg'>
+    <form onSubmit={handleSubmit} className='bg-slate-100 w-5/6 sm:w-3/6 flex justify-between p-4 rounded-lg'>
               <input type="text" ref={searchText} placeholder="the Lost World..." className='font-bold uppercase ont-poppins w-full bg-transparent focus:outline-none text-[rgb(136,152,185)]' />
               <button onClick={handleSubmit} type="submit">
                 <FaSearch size={24} className="text-[rgb(136,152,185)]"/>
