@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 import Hero from "./Hero";
 import Loader from "./Loader";
 import SearchForm from "./SearchForm";
+import Footer from "./Footer";
 
 export {
     Book,
@@ -13,5 +14,6 @@ export {
     Navbar,
     Hero,
     Loader,
-    SearchForm
+    SearchForm,
+    Footer
 };

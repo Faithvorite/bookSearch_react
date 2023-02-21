@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       clipPath: {
         mycurve: "polygon(0 0, 15% 0, 40% 5%, 65% 0, 85% 0, 100% 5%, 100% 100%, 85% 95%, 65% 95%, 40% 100%, 15% 95%, 0 95%)",
+        footercurve: "polygon(18% 0, 30% 2%, 43% 5%, 57% 6%, 75% 4%, 86% 1%, 90% 0, 100% 0, 100% 100%, 0 100%, 0 8%, 9% 4%);"
     },
       backgroundImage: {
         'bridge': "url('https://i.imgur.com/CoQnIbZ.png')",

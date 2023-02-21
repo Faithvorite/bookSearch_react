@@ -1,5 +1,5 @@
 import React from 'react'
-import { BookList, Hero, Navbar, SearchForm } from '../components'
+import { BookList, Footer, Hero, Navbar, SearchForm } from '../components'
 import { Outlet } from 'react-router-dom'
 
 const Home = () => {
@@ -10,6 +10,7 @@ const Home = () => {
       {/* <SearchForm /> */}
       <BookList />
       <Outlet />
+      <Footer />
     </main>
   )
 }
