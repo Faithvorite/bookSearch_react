@@ -9,8 +9,8 @@ const Navbar = () => {
       <Link to="/" className='text-[rgb(136,152,185)] font-bold font-logo  text-xl sm:text-4xl'>
         BookClub.
       </Link>
-      <Link to="/add-book"
-      className=' bg-[rgb(136,152,185)] text-white p-2 rounded-md font-oswald tracking-wider hover:bg-[rgb(255,136,106)] uppercase transition-all ease-in-out'>Add Book</Link>
+      <Link to="/write-review"
+      className=' bg-[rgb(136,152,185)] text-white p-2 rounded-md font-oswald tracking-wider hover:bg-[rgb(255,136,106)] uppercase transition-all ease-in-out'>Write a Review</Link>
     </header>
     </div>
   )

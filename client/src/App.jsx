@@ -2,7 +2,7 @@ import React from 'react'
 import {
   BrowserRouter, Routes, Route
 } from 'react-router-dom';
-import { Home, About } from "./pages"
+import { Home, About, WriteReview } from "./pages"
 import {BookList, BookDetails} from "./components";
 
 const App = () => {
@@ -14,6 +14,7 @@ const App = () => {
       <Route path="about" element={<About />} />
       <Route path="book" element={<BookList />} />
       <Route path="book/:id" element={<BookDetails />} />
+      <Route path="write-review" element={<WriteReview />} />
     </Routes>
 
     </BrowserRouter>
