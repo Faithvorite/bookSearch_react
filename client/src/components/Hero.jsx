@@ -15,7 +15,7 @@ const Hero = () => {
         <div className="w-screen mr-3 font-bold text-4xl sm:text-6xl font-logo text-[rgb(136,152,185)] p-2 ">the {text}</div>
        <SearchForm />
         <div className='font-oswald uppercase text-3xl w-full text-white p-4 bottom-0 right-0 flex items-end justify-between'> <div className="font-oswald text-xl text-white">  
-          Welcome to the Book Club! Browse the 2023 reading list or add your own.
+          Browse the 2023 reading list or add your own.
         
       </div>
       <div className='tracking-widest font-oswald'>2023</div>
