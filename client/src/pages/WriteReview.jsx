@@ -40,21 +40,21 @@ const WriteReview = () => {
         onChange={(e) => {
           setTitle(e.target.value)
         }}
-        className="p-4 rounded-md font-oswald focus:outline-none"
+        className="p-4 rounded-md font-oswald focus:outline-none bg-slate-100 focus:bg-white"
         />
         <input type="text" 
         placeholder='Author'
         onChange={(e) => {
           setAuthor(e.target.value)
         }}
-        className="p-4 rounded-md font-oswald focus:outline-none"
+        className="p-4 rounded-md font-oswald focus:outline-none bg-slate-100 focus:bg-white"
         />
         <input type="text" 
         placeholder="Your Name" 
         onChange={(e) => {
           setName(e.target.value)
         }}
-        className="p-4 rounded-md font-oswald focus:outline-none"/>
+        className="p-4 rounded-md font-oswald focus:outline-none bg-slate-100 focus:bg-white"/>
         
 
         <textarea 
@@ -63,7 +63,7 @@ const WriteReview = () => {
         onChange={(e) => {
           setData(e.target.value)
         }}
-        className="h-[250px] p-4 rounded-md font-poppins focus:outline-none"
+        className="h-[250px] p-4 rounded-md font-poppins focus:outline-none bg-slate-100 focus:bg-white"
         />
         <button 
         onClick={createReview}
@@ -78,8 +78,8 @@ const WriteReview = () => {
         <div className='grid grid-cols-1 md:grid-cols-2  gap-6 m-10'>
           {listOfReviews.map((review, id) => {
             return (
-              <div key={id} className="bg-white relative p-6 lg:p-10 rounded-xl min-h-[300px] flex flex-col items-center justify-center text-md sm:text-xl text-center">
-                {/* <div className='clip-path-mycurve bg-white/80 absolute h-4/6 w-full  -z-0'></div> */}
+              <div key={id} className="bg-white relative p-6 lg:p-10 rounded-xl min-h-[300px] flex flex-col items-center justify-center text-md sm:text-xl text-center space-y-2 hover:scale-105 transition-all ease-in-out">
+                <div className='clip-path-footercurve bg-[rgb(136,152,185)]/10 absolute h-3/6 w-full bottom-0 -z-0'></div>
                 <h1 className='font-oswald uppercase z-20 '>{review.title}</h1>
                 <h1 className='font-poppins z-20 italic mb-2 '>-{review.author}</h1>
                 <h1 className='font-poppins z-20'>" {review.data} "</h1>

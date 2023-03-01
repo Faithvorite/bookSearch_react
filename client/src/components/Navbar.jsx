@@ -4,7 +4,7 @@ import SearchForm from './SearchForm'
 
 const Navbar = () => {
   return (
-    <div className=''>
+    <div className='z-30'>
     <header className='w-full flex justify-between items-center bg-[rgb(255,253,249)] md:px-36 p-4'>
       <Link to="/" className='text-[rgb(136,152,185)] font-bold font-logo  text-xl sm:text-4xl'>
         BookClub.
