@@ -9,6 +9,10 @@ const ReviewSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    author: {
+        type: String,
+        required: true
+    },
     data: {
         type: String,
         required: true,

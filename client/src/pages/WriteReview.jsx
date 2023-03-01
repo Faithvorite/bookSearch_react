@@ -5,6 +5,7 @@ import { Footer, Navbar } from '../components';
 const WriteReview = () => {
   const [listOfReviews, setListOfReviews] = useState([]);
   const [name, setName] = useState('');
+  const [author, setAuthor] = useState("");
   const [title, setTitle] = useState("");
   const [data, setData] = useState("");
 
@@ -18,6 +19,7 @@ const WriteReview = () => {
     Axios.post("http://localhost:3001/createReview", {
       name, 
       title, 
+      author,
       data
     }).then((response) => {
       alert("Review Posted!");
@@ -41,6 +43,13 @@ const WriteReview = () => {
         className="p-4 rounded-md font-oswald focus:outline-none"
         />
         <input type="text" 
+        placeholder='Author'
+        onChange={(e) => {
+          setAuthor(e.target.value)
+        }}
+        className="p-4 rounded-md font-oswald focus:outline-none"
+        />
+        <input type="text" 
         placeholder="Your Name" 
         onChange={(e) => {
           setName(e.target.value)
@@ -58,20 +67,21 @@ const WriteReview = () => {
         />
         <button 
         onClick={createReview}
-        className=' font-oswald bg-[rgb(136,152,185)] hover:text-xl transition-all ease-in-out py-2 sm:py-5 px-10 rounded-md focus:outline-none text-white font-bold text-lg uppercase tracking-widest'
+        className=' font-oswald bg-[rgb(136,152,185)] hover:text-white text-[rgb(255,136,106)] transition-all ease-in-out py-2 sm:py-5 px-10 rounded-md focus:outline-none font-bold text-lg uppercase tracking-widest'
         >
           Submit Review
         </button>
       </div>
 
       <div className='m-10 '>
-        <h1 className='font-logo text-[rgb(136,152,185)] text-2xl font-bold text-center uppercase'>Check out these BookClub Reviews!</h1>
+        <h1 className='font-logo text-[rgb(136,152,185)] text-xl font-bold text-center uppercase'>Check out these BookClub Reviews!</h1>
         <div className='grid grid-cols-2 lg:grid-cols-3 gap-4 m-10'>
           {listOfReviews.map((review, id) => {
             return (
               <div key={id} className="bg-white relative p-10 rounded-xl min-h-[300px] flex flex-col items-center justify-center text-xl">
                 {/* <div className='clip-path-mycurve bg-white/80 absolute h-4/6 w-full  -z-0'></div> */}
-                <h1 className='font-oswald uppercase mb-2 z-20 '>{review.title}</h1>
+                <h1 className='font-oswald uppercase z-20 '>{review.title}</h1>
+                <h1 className='font-poppins z-20 italic mb-2 '>-{review.author}</h1>
                 <h1 className='font-poppins z-20'>" {review.data} "</h1>
                 <h1 className='font-oswald md:ml-48 z-20 '> -{review.name}</h1>
               </div>
