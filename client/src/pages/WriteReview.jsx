@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Axios from "axios";
+import { Navbar } from '../components';
 
 const WriteReview = () => {
   const [listOfReviews, setListOfReviews] = useState([]);
@@ -25,32 +26,48 @@ const WriteReview = () => {
 
   }
   return (
-    <div>
-      <div>
+    
+    <main className='bg-slate-100'>
+      <Navbar />
+      <div className=''>
+
+       <div className='flex flex-col space-y-2 w-full md:w-4/6 mx-auto p-10 z-20'>
         <input type="text" 
         placeholder="Name.." 
         onChange={(e) => {
           setName(e.target.value)
-        }}/>
+        }}
+        className="p-2 rounded-md font-oswald focus:outline-none"/>
         <input type="text" 
         placeholder='Book Title'
         onChange={(e) => {
           setTitle(e.target.value)
-        }}/>
-        <input 
+        }}
+        className="p-2 rounded-md font-oswald focus:outline-none"
+        />
+
+        <textarea 
         type="text" 
         placeholder='Write your review...' 
         onChange={(e) => {
           setData(e.target.value)
-        }}/>
-        <button onClick={createReview}>Submit Review</button>
+        }}
+        className="h-[250px] p-2 rounded-md font-poppins focus:outline-none"
+        />
+        <button 
+        onClick={createReview}
+        className=' font-oswald bg-[rgb(136,152,185)] hover:bg-[rgb(255,136,106)] transition-all ease-in-out py-2 sm:py-5 px-10 rounded-md focus:outline-none text-white font-bold text-lg uppercase tracking-widest'
+        >
+          Submit Review
+        </button>
       </div>
+
       <div>
         <h1>Reviews</h1>
         <div>
-          {listOfReviews.map((review) => {
+          {listOfReviews.map((review, id) => {
             return (
-              <div>
+              <div key={id}>
                 <h1>{review.name}</h1>
                 <h1>{review.title}</h1>
                 <h1>{review.data}</h1>
@@ -59,8 +76,9 @@ const WriteReview = () => {
           })}
         </div>
       </div>
-      
     </div>
+      
+    </main>
   )
 }
 
