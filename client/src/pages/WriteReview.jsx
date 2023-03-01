@@ -78,7 +78,7 @@ const WriteReview = () => {
         <div className='grid grid-cols-2 lg:grid-cols-3 gap-4 m-10'>
           {listOfReviews.map((review, id) => {
             return (
-              <div key={id} className="bg-white relative p-10 rounded-xl min-h-[300px] flex flex-col items-center justify-center text-xl">
+              <div key={id} className="bg-white relative p-10 rounded-xl min-h-[300px] flex flex-col items-center justify-center text-xl text-center">
                 {/* <div className='clip-path-mycurve bg-white/80 absolute h-4/6 w-full  -z-0'></div> */}
                 <h1 className='font-oswald uppercase z-20 '>{review.title}</h1>
                 <h1 className='font-poppins z-20 italic mb-2 '>-{review.author}</h1>
