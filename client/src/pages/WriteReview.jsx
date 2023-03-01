@@ -75,7 +75,7 @@ const WriteReview = () => {
 
       <div className='m-10 '>
         <h1 className='font-logo text-[rgb(136,152,185)] text-xl font-bold text-center uppercase'>Check out these BookClub Reviews!</h1>
-        <div className='grid grid-cols-2 lg:grid-cols-3 gap-4 m-10'>
+        <div className='grid grid-cols-2 xl:grid-cols-3 gap-4 m-10'>
           {listOfReviews.map((review, id) => {
             return (
               <div key={id} className="bg-white relative p-10 rounded-xl min-h-[300px] flex flex-col items-center justify-center text-xl text-center">
