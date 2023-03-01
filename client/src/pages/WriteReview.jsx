@@ -20,13 +20,15 @@ const WriteReview = () => {
       name, 
       title, 
       author,
-      data
+      data, 
+      // timestamp
     }).then((response) => {
       alert("Review Posted!");
       document.location.reload();
     })
 
   }
+
   return (
     
     <main className='bg-slate-100 -z-20'>
@@ -67,7 +69,7 @@ const WriteReview = () => {
         />
         <button 
         onClick={createReview}
-        className=' font-oswald bg-[rgb(136,152,185)] hover:text-white text-[rgb(255,136,106)] transition-all ease-in-out py-2 sm:py-5 px-10 rounded-md focus:outline-none font-bold text-lg uppercase tracking-widest'
+        className=' font-oswald bg-[rgb(136,152,185)] text-white hover:text-[rgb(255,136,106)] transition-all ease-in-out py-2 sm:py-5 px-10 rounded-md focus:outline-none font-bold text-lg uppercase tracking-widest'
         >
           Submit Review
         </button>
@@ -84,6 +86,8 @@ const WriteReview = () => {
                 <h1 className='font-poppins z-20 italic mb-2 '>-{review.author}</h1>
                 <h1 className='font-poppins z-20'>" {review.data} "</h1>
                 <h1 className='font-oswald md:ml-48 z-20 '> -{review.name}</h1>
+                {/* <h1>{review.timestamp}</h1> */}
+                {/* <button onClick={() =>{ setLikes(likes + 1)}}>X{review.likes}</button> */}
               </div>
             )
           })}

@@ -17,8 +17,14 @@ const ReviewSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    // likes: {
+    //     type: Number,
+    //     required: false
+
+    // }
     // timestamp: {
-    //     type: Timestamp,
+    //     type: Date,
+    //     default: Date.now,
     //     required: true,
     // }
 });
