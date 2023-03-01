@@ -34,7 +34,7 @@ const WriteReview = () => {
       <div className='bg-[rgb(255,136,106)] clip-path-mycurve h-5/6 w-screen fixed -z-0'></div>
       <div className='relative mt-10'>
         
-       <div className='flex flex-col space-y-2 w-full md:w-4/6 mx-auto p-10 z-30 text-xl'>
+       <div className='flex flex-col space-y-2 w-full md:w-4/6 mx-auto p-10 z-30 text-md sm:text-xl'>
        <input type="text" 
         placeholder='Book Title'
         onChange={(e) => {
@@ -73,12 +73,12 @@ const WriteReview = () => {
         </button>
       </div>
 
-      <div className='m-10 '>
+      <div className='m-4'>
         <h1 className='font-logo text-[rgb(136,152,185)] text-xl font-bold text-center uppercase'>Check out these BookClub Reviews!</h1>
-        <div className='grid grid-cols-2 xl:grid-cols-3 gap-4 m-10'>
+        <div className='grid grid-cols-1 md:grid-cols-2  gap-6 m-10'>
           {listOfReviews.map((review, id) => {
             return (
-              <div key={id} className="bg-white relative p-10 rounded-xl min-h-[300px] flex flex-col items-center justify-center text-xl text-center">
+              <div key={id} className="bg-white relative p-6 lg:p-10 rounded-xl min-h-[300px] flex flex-col items-center justify-center text-md sm:text-xl text-center">
                 {/* <div className='clip-path-mycurve bg-white/80 absolute h-4/6 w-full  -z-0'></div> */}
                 <h1 className='font-oswald uppercase z-20 '>{review.title}</h1>
                 <h1 className='font-poppins z-20 italic mb-2 '>-{review.author}</h1>

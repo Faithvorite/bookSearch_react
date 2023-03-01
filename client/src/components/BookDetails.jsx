@@ -51,7 +51,7 @@ const BookDetails = () => {
       <div className='p-2 sm:p-10 items-center '>
         <button type='button' className='flex' onClick={() => navigate("/")}>
           <FaArrowLeft className='hover:-translate-y-2 transition-all ease-in-out' size = {22} />
-          <span className='font-oswald px-4'>Go Back</span>
+          <span className='font-oswald px-4 text-xl'>Go Back</span>
         </button>
 
         <div className='flex flex-col lg:flex-row items-center justify-center p-10 sm:px-24 gap-10'  > 
