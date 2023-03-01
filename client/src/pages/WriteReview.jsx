@@ -62,12 +62,12 @@ const WriteReview = () => {
         </button>
       </div>
 
-      <div>
-        <h1>Reviews</h1>
-        <div>
+      <div className='m-10 '>
+        <h1>BookClub Reviews</h1>
+        <div className='grid grid-cols-3 gap-4 m-10'>
           {listOfReviews.map((review, id) => {
             return (
-              <div key={id}>
+              <div key={id} className="">
                 <h1>{review.name}</h1>
                 <h1>{review.title}</h1>
                 <h1>{review.data}</h1>
