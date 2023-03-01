@@ -10,13 +10,13 @@ const WriteReview = () => {
   const [data, setData] = useState("");
 
   useEffect(() => {
-    Axios.get("http://localhost:3001/getReviews").then((response) => {
+    Axios.get("https://bookclubsearch.onrender.com/getReviews").then((response) => {
       setListOfReviews(response.data);
     })
   }, [])
 
   const createReview = () => {
-    Axios.post("http://localhost:3001/createReview", {
+    Axios.post("https://bookclubsearch.onrender.com/createReview", {
       name, 
       title, 
       author,
