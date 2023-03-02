@@ -28,6 +28,6 @@ app.post("/createReview", async (req,res) => {
     res.json(review);
 });
 
-app.listen(3001, () => {
+app.listen(8080, () => {
     console.log("SERVER RUNS");
 });
