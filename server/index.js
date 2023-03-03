@@ -1,14 +1,18 @@
-const express = require("express");
+
+import express from 'express';
+import * as dotenv from 'dotenv';
+import cors from 'cors';
+
+dotenv.config();
+
+import ReviewModel from './mongodb/models/reviews.js';
+import connectDB from './mongodb/connect.js'
+
+dotenv.config();
+
 const app = express();
-const mongoose = require('mongoose');
-const ReviewModel = require('./models/Reviews')
-require("dotenv").config();
-
-const cors = require("cors");
-
-app.use(express.json());
 app.use(cors())
-mongoose.connect(process.env.MONGODB_URL)
+app.use(express.json());
 
 app.get("/getReviews", (req, res) => {
     ReviewModel.find({}, (err, result) => {
@@ -28,6 +32,14 @@ app.post("/createReview", async (req,res) => {
     res.json(review);
 });
 
-app.listen(8080, () => {
-    console.log("SERVER RUNS");
-});
+
+const startServer = async () => {
+    try {
+      connectDB(process.env.MONGODB_URL);
+      app.listen(8080, () => console.log('Server started on port 8080'));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  
+  startServer();
