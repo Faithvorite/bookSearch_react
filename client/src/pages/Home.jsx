@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom'
 
 const Home = () => {
   return (
-    <main className='bg-slate-100 h-full '>
+    <main className='bg-slate-100 h-full overscroll-x-none '>
       <Navbar />
       <Hero />
       {/* <SearchForm /> */}
