@@ -24,7 +24,6 @@ const WriteReview = () => {
       // timestamp
     }).then((response) => {
       alert("Review Posted!");
-      document.location.reload();
     })
 
   }
