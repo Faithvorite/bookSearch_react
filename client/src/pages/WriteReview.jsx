@@ -15,7 +15,13 @@ const WriteReview = () => {
       setListOfReviews(response.data);
     })
     .catch(error => console.log(error))
-  }, [])
+  }, []);
+
+  // async function getReviews() {
+  //   const response = await Axios.get(
+  //     "https://bookclubsearch.onrender.com/getReview"
+  //   )
+  // }
 
   const createReview = () => {
     Axios.post("https://bookclubsearch.onrender.com/createReview", {
@@ -25,7 +31,13 @@ const WriteReview = () => {
       data, 
       // timestamp
     }).then((response) => {
+      setListOfReviews([...listOfReviews, {
+        name, 
+        title, 
+        author,
+        data}])
       alert("Review Posted!");
+     
     })
 
   }
