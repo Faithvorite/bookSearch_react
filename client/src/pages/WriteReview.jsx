@@ -9,13 +9,13 @@ const WriteReview = () => {
   const [title, setTitle] = useState("");
   const [data, setData] = useState("");
 
-  useEffect(() => {
-    Axios.get("https://bookclubsearch.onrender.com/getReviews")
-    .then((response) => {
-      setListOfReviews(response.data);
-    })
-    .catch(error => console.log(error))
-  }, []);
+  // useEffect(() => {
+  //   Axios.get("https://bookclubsearch.onrender.com/getReviews")
+  //   .then((response) => {
+  //     setListOfReviews(response.data);
+  //   })
+  //   .catch(error => console.log(error))
+  // }, []);
 
   // async function getReviews() {
   //   const response = await Axios.get(
@@ -23,6 +23,26 @@ const WriteReview = () => {
   //   )
   // }
 
+  const fetchReviews = async () => {
+    try {
+      const response = await fetch("https://bookclubsearch.onrender.com/getReviews", {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      if (response.ok) {
+        const result = await response.json();
+        setListOfReviews(result);
+      }
+    } catch (err) {
+      alert(err);
+    } 
+  }
+
+  useEffect(() => {
+    fetchReviews();
+  }, [])
   const createReview = () => {
     Axios.post("https://bookclubsearch.onrender.com/createReview", {
       name, 

@@ -17,17 +17,7 @@ const ReviewSchema = new mongoose.Schema({
     data: {
         type: String,
         required: true,
-    },
-    // likes: {
-    //     type: Number,
-    //     required: false
-
-    // }
-    // timestamp: {
-    //     type: Date,
-    //     default: Date.now,
-    //     required: true,
-    // }
+    }
 });
 
 const ReviewModel = mongoose.model("reviews", ReviewSchema);
