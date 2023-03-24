@@ -43,6 +43,7 @@ const WriteReview = () => {
   useEffect(() => {
     fetchReviews();
   }, [])
+  
   const createReview = () => {
     Axios.post("https://bookclubsearch.onrender.com/createReview", {
       name, 
@@ -66,7 +67,7 @@ const WriteReview = () => {
     
     <main className='bg-slate-100 -z-20'>
       <Navbar />
-      <div className='bg-[rgb(255,136,106)] clip-path-mycurve h-5/6 w-screen fixed -z-0'></div>
+      <div className='bg-[rgb(255,136,106)]/80 clip-path-mycurve h-5/6 w-screen fixed -z-0'></div>
       <div className='relative mt-10'>
         
        <div className='flex flex-col space-y-2 w-full md:w-4/6 mx-auto p-10 z-30 text-md sm:text-xl'>

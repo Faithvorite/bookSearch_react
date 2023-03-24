@@ -10,7 +10,7 @@ const Navbar = () => {
         BookClub.
       </Link>
       <Link to="/write-review"
-      className=' bg-[rgb(136,152,185)] text-white p-2 rounded-md font-oswald tracking-wider hover:bg-[rgb(255,136,106)] uppercase transition-all ease-in-out'>Write a Review</Link>
+      className=' bg-[rgb(136,152,185)] text-white p-4 rounded-md font-oswald tracking-wider hover:bg-[rgb(255,136,106)] uppercase transition-all ease-in-out'>Write a Review</Link>
     </header>
     </div>
   )
